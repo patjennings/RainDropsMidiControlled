@@ -13,7 +13,7 @@ MidiBus bus;
 ArrayList<Point> points = new ArrayList<Point>();
 /* OPTIONS */
 boolean opacityMode = false; // est-ce que l'opacité diminue au cours de l'apparition ?
-boolean disappearMode = true; // est-ce que l'objet disparait au cours du temps ?
+boolean disappearMode = false; // est-ce que l'objet disparait au cours du temps ?
 String drawMode = "STROKE"; // mode de dessin, “STROKE" ou "FILL"
 
 int opac = 255;
