@@ -10,13 +10,13 @@ import de.looksgood.ani.*;
 import themidibus.*;
 
 MidiBus bus;
-float x = 256;
-float y = 256;
-int diameter = 0;
-int opac = 255;
 ArrayList<Point> points = new ArrayList<Point>();
+/* OPTIONS */
 boolean opacityMode = false; // est-ce que l'opacité diminue au cours de l'apparition ?
+boolean disappearMode = true; // est-ce que l'objet disparait au cours du temps ?
 String drawMode = "STROKE"; // mode de dessin, “STROKE" ou "FILL"
+
+int opac = 255;
 int canalRed, canalGreen, canalBlue = 125;
 color shapeColor;
 int shapeOpacity = 125;
