@@ -29,10 +29,12 @@ class Point {
         }
 
         //Extinction de l'objet
-        if(ssize >= tsize-10){
-          opacDisp += dispSpeed;
-          if(opacDisp > 255){
-            opacDisp = 255;
+        if(disappearMode == true){
+          if(ssize >= tsize-10){
+            opacDisp += dispSpeed;
+            if(opacDisp > 255){
+              opacDisp = 255;
+            }
           }
         }
 
