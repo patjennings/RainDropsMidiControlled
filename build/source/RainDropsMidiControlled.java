@@ -29,13 +29,13 @@ public class RainDropsMidiControlled extends PApplet {
 
 
 MidiBus bus;
-float x = 256;
-float y = 256;
-int diameter = 0;
-int opac = 255;
 ArrayList<Point> points = new ArrayList<Point>();
+/* OPTIONS */
 boolean opacityMode = false; // est-ce que l'opacit\u00e9 diminue au cours de l'apparition ?
+boolean disappearMode = true; // est-ce que l'objet disparait au cours du temps ?
 String drawMode = "STROKE"; // mode de dessin, \u201cSTROKE" ou "FILL"
+
+int opac = 255;
 int canalRed, canalGreen, canalBlue = 125;
 int shapeColor;
 int shapeOpacity = 125;
@@ -121,10 +121,12 @@ class Point {
         }
 
         //Extinction de l'objet
-        if(ssize >= tsize-10){
-          opacDisp += dispSpeed;
-          if(opacDisp > 255){
-            opacDisp = 255;
+        if(disappearMode == true){
+          if(ssize >= tsize-10){
+            opacDisp += dispSpeed;
+            if(opacDisp > 255){
+              opacDisp = 255;
+            }
           }
         }
 
